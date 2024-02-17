@@ -1,0 +1,85 @@
+:root {
+    font-size: 62.5%;
+    --nav-height: 7.2rem;
+
+    --primary-color: #053272;
+    --secondary-color: #e0af00; 
+    --bg-color: #eff0f3;
+    --p-color: #2a2a2a;
+    --color-text: #0d0d0d;
+
+    --f1: clamp(1.3rem, 1vw, 1.6rem);
+    --f2: clamp(1.6rem, 1vw, 2rem);
+    --f3: clamp(2rem, 1vw, 2.4rem);
+    --f4: clamp(2.4rem, 1vw, 3.2rem);
+    --f5: clamp(3.2rem, 1vw, 6.4rem);
+}  
+
+#politicapdf h2 {
+    font-size: 2rem;
+    color: var(--p-color);
+    font-weight: 500;
+
+    margin-bottom: 3rem;
+}
+
+#politicapdf h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+
+    margin-bottom: 3rem;
+}
+
+#politicapdf a button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+  
+    box-shadow: 0px 2px 20px #bcbcbc;
+  
+    transition: all 200ms ease-in-out;
+    margin-left: .5rem;
+
+    margin-bottom: 4rem;
+    cursor: pointer;
+  }
+  
+#politicapdf a button:hover {
+    outline: 1px solid var(--secondary-color);
+    cursor: pointer;
+  }
+
+#politicapdf .text p {
+    line-height: 1.6;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1080px) {
+    .wrapper {
+        width: min(130rem, 100%);
+      }
+
+    section#politicapdf .wrapper {
+        text-align: left;
+    }
+
+    section#politicapdf header h1 {
+        font-size: 4rem;
+        text-align: left;
+    }
+
+    section#politicapdf h2 {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    section#politicapdf .text p {
+        text-align: left;
+    }
+}

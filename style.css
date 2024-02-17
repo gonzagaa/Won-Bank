@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --nav-height: 7.2rem;
+
+    --primary-color: #053272;
+    --secondary-color: #e0af00; 
+    --bg-color: #eff0f3;
+    --p-color: #2a2a2a;
+    --color-text: #0d0d0d;
+
+    --f1: clamp(1.3rem, 1vw, 1.6rem);
+    --f2: clamp(1.6rem, 1vw, 2rem);
+    --f3: clamp(2rem, 1vw, 2.4rem);
+    --f4: clamp(2.4rem, 1vw, 3.2rem);
+    --f5: clamp(3.2rem, 1vw, 6.4rem);
+}  
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  ul {
+    list-style: none;
+  }
+
+  .wrapper {
+    width: min(50rem, 100%);
+    margin-inline: auto;
+  
+    padding-inline: 2.4rem;
+  }
+
+  section {
+    padding-block: 10rem;
+  }
+
+/*HEADER HOME =================== */
+#home {
+  background-color: var(--bg-color);
+  height: 110vh;
+
+  position: relative;
+}
+
+#home img.W {
+  position: absolute;
+  bottom: 3rem;
+  left: -7rem;
+  width: 400px;
+  opacity: .2;
+  z-index: 1;
+  transform: rotate(20deg);
+
+  animation: moveW infinite linear 4s;
+}
+
+@keyframes moveW {
+  50% {
+    transform: rotate(25deg);
+  }
+}
+
+#home .content {
+    width: 100%;
+    height: 110vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  z-index: 2;
+}
+
+#home .text p {
+  font-size: var(--f2);
+  color: var(--p-color);
+  font-weight: 600;
+
+  margin-bottom: .5rem;
+}
+
+#home .text h1 {
+  font-size: 2.5rem;
+  text-align: left;
+  font-weight: 400;
+  color: var(--primary-color);
+
+  margin-bottom: 2rem;
+}
+
+#home .text h1 span {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+#home .text h1 span.azul {
+  color: var(--primary-color);
+}
+
+#home .text a button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--secondary-color);
+
+  box-shadow: 0px 2px 20px #bcbcbc;
+
+  transition: all 200ms ease-in-out;
+  margin-left: .5rem;
+}
+
+#home .text a button:hover {
+  outline: 1px solid var(--secondary-color);
+}
+
+#home .image {
+  z-index: 2;
+}
+
+#home .image img {
+  width: 100%;
+
+}
+
+/*beneficios =================== */
+#beneficios header h2 {
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 2.5rem;
+
+  margin-bottom: 5rem;
+}
+
+#beneficios .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+#beneficios .cards .card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#beneficios .cards .card h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  grid-area: A;
+  text-align: left;
+}
+
+#beneficios .cards .card img {
+  width: 7rem;
+  background-color: var(--primary-color);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  grid-area: B;
+
+  box-shadow:  8px 8px 16px #a8a8a8,
+             -8px -8px 16px #B4C1D4;
+}
+
+/*descricao =================== */
+#descricao {
+  background-color: var(--bg-color);
+}
+
+#descricao .image img {
+  width: 100%;
+}
+
+#descricao header h2 {
+  color: var(--secondary-color);
+  font-weight: 800;
+  font-size: 2.5rem;
+
+  margin-block: 4rem;
+}
+
+#descricao header h2 span.exclamacao {
+  color: var(--primary-color);
+}
+
+#descricao .text p {
+  font-weight: 500;
+  color: var(--p-color);
+  line-height: 1.6;
+}
+
+#descricao .text p span {
+  font-weight: 400;
+  color: var(--secondary-color)
+}
+
+#descricao .text p span.wonbank {
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+#descricao .text .card p {
+  font-weight: 600;
+}
+
+#descricao .text .card p span {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+#descricao .text .card {
+  margin-top: 3rem;
+
+  padding: 2rem;
+  background: rgba(189, 189, 189, 0.28);
+  border-radius: 2rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(9.7px);
+  border: 1px solid rgba(148, 148, 148, 0.3);
+
+  box-shadow:  10px 10px 20px #cccccc,
+             -10px -10px 20px #f4f4f4;
+
+  position: relative;
+  z-index: 1;
+}
+
+#descricao .text .card img.W {
+  position: absolute;
+  width: 50%;
+  z-index: -1;
+  opacity: .1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*POLITICA =================== */
+#politica .image img {
+  width: 100%;
+}
+
+#politica header h2 {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 2.5rem;
+
+  margin-block: 4rem;
+}
+
+#politica header h2 span {
+  font-weight: 800;
+}
+
+#politica header h2 span.exclamacao {
+  color: var(--secondary-color);
+}
+
+#politica a {
+  text-decoration: none;
+}
+
+#politica a button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+
+  box-shadow: 0px 2px 20px #bcbcbc;
+
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+#politica a button:hover {
+  outline: 1px solid var(--primary-color);
+}
+/*DOWNLOAD APP =================== */
+#app {
+  background-color: #B4C1D4;
+}
+
+#app header h2 {
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 2.5rem;
+
+  margin-bottom: 4rem;
+}
+
+#app .downloads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+#app .downloads .image {
+  transition: all 200ms ease-in-out;
+}
+
+#app .downloads .image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(2px 2px 20px #4a4a4a66);
+}
+
+/*backToTopButton =================== */
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: all 300ms ease-in-out;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+#backToTopButton ion-icon {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border-radius: 50%;
+  font-size: 4rem;
+  transition: all 300ms ease-in-out;
+}
+
+#backToTopButton ion-icon:hover {
+  transform: scale(1.1);
+}
+
+/*responsividade =================== */
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: min(70rem, 100%);
+  }
+
+  header#home .content .text {
+    margin-top: var(--nav-height);
+  }
+
+  section#beneficios .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 7rem;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .wrapper {
+    width: min(130rem, 100%);
+  }
+
+  #backToTopButton ion-icon {
+    font-size: 4rem;
+  }
+
+  section#beneficios header h2,
+  section#descricao header h2,
+  section#politica header h2,
+  section#app header h2 {
+    font-size: 4rem;
+  }
+  
+  header#home {
+    height: 100vh;
+  }
+
+  #home img.W {
+    bottom: 3rem;
+    left: -10rem;
+    width: 600px;
+  }
+
+  header#home .wrapper .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    height: 100vh;
+  }
+
+  header#home .wrapper .content img {
+    width: 100%;
+  }
+
+  header#home .wrapper .content .text {
+    text-align: start;
+  }
+
+  header#home .wrapper .content .text p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  header#home .wrapper .content .text h1 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+  } 
+
+  header#home .wrapper .content .text a button {
+    font-size: 2.2rem;
+
+    cursor: pointer;
+    background: rgba(189, 189, 189, 0.28);
+    border-radius: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(9.7px);
+    border: 2px solid rgba(148, 148, 148, 0.3);
+
+    color: var(--primary-color);
+  }
+
+  section#beneficios .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 7rem;
+  }
+
+  section#beneficios header h2 {
+    margin-bottom: 8rem;
+  }
+
+  section#beneficios .cards .card {
+    background: rgba(189, 189, 189, 0.28);
+    border-radius: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(9.7px);
+    border: 1px solid rgba(148, 148, 148, 0.3);
+  
+    box-shadow:  7px 7px 20px #cccccc91,
+               -7px -7px 20px #f4f4f487;
+
+    padding-block: 2rem;
+    position: relative;
+    justify-content: center;
+  }
+
+  section#beneficios .cards .card h3 {
+    margin-left: 4rem;
+  }
+
+  section#beneficios .cards .card img {
+    width: 7rem;
+    position: absolute;
+    left: -2rem;
+    top: -2rem;
+    
+    box-shadow:  6px 6px 16px #b8b8b8,
+             -6px -6px 16px #B4C1D4;
+  }
+
+  section#descricao .wrapper .image {
+    display: flex;
+    justify-content: start;
+  }
+
+  section#descricao .wrapper .image img {
+    width: 70%;
+  }
+
+  section#descricao .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  section#politica .wrapper .image {
+    grid-area: B;
+    display: flex;
+    justify-content: end;
+  }
+
+  section#politica .wrapper .image img {
+    width: 70%;
+  }
+  
+  section#politica .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A B";
+    align-items: center;
+  }
+
+  section#app .wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+  }
+
+  section#app .wrapper .downloads {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+@keyframes moveimg {
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+
+
+
+
+ 
