@@ -85,6 +85,7 @@ html {
 }
 
 #home .text {
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -115,6 +116,10 @@ html {
 
 #home .text h1 span.azul {
   color: var(--primary-color);
+}
+
+#home .text a button.juntar {
+  margin-top: 1rem;
 }
 
 #home .text a button {
